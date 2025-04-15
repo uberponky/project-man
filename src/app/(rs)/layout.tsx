@@ -1,4 +1,5 @@
 import Header from "@/components/Header"
+import './styles.css'
 
 export default async function RSLayout({
   children,
@@ -6,9 +7,9 @@ export default async function RSLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="mx-auto w-full max-w-7xl">
+    <div className="app-body">
       <Header />
-      <div className="px-4 py-2">
+      <div className="app-body__data">
         {children}
       </div>
     </div>

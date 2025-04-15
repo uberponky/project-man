@@ -20,11 +20,14 @@ export default async function Tickets({
 
     return (
       <>
-        <TicketSearch />
-        {results.length 
-          ? <TicketTable data={results}/> 
-          : <p className="mt-4">No results found</p>
-        }
+        <div className="app-body__top-bar">Tickets</div>
+        <div className="app-body__data-wrapper">
+          <TicketSearch />
+          {results.length 
+            ? <TicketTable data={results}/> 
+            : <p className="mt-4">No results found</p>
+          }
+        </div>
       </>
     )
   }
@@ -34,11 +37,14 @@ export default async function Tickets({
 
   return (
     <>
-      <TicketSearch />
-      {results.length 
-        ? <TicketTable data={results}/> 
-        : <p className="mt-4">No results found</p>
-      }
+      <div className="app-body__top-bar">Tickets</div>
+      <div className="app-body__data-wrapper">
+        <TicketSearch />
+        {results.length 
+          ? <TicketTable data={results}/> 
+          : <p className="mt-4">No results found</p>
+        }
+      </div>
     </>
   )
 }
