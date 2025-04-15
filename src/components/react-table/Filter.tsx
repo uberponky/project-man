@@ -24,7 +24,7 @@ export function Filter<T>({ column, filteredRows }: Props<T>) {
         value={(columnFilterValue ?? '') as string}
         onChange={value => column.setFilterValue(value)}
         placeholder={`Search... (${uniqueFilteredValues.size})`}
-        className="w-full border shadow rounded bg-card"
+        className="w-full border shadow rounded"
         list={column.id + 'list'}
       />
     </>

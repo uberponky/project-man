@@ -1,8 +1,13 @@
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Inter, Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/sonner"
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ['latin']
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,11 +21,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Borby's Bow-House",
-    default: "Borby's Bow-House"
+    template: "%s | Blank Box Projects",
+    default: "Blank Box Projects"
   },
-  description: "Check me out",
-  applicationName: "Borby's Bow-House"
+  description: "Blank Box Projects",
+  applicationName: "Blank Box Projects"
 };
 
 export default function RootLayout({
@@ -31,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"

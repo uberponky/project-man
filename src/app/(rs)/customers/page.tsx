@@ -15,18 +15,28 @@ export default async function Customers({
   const { searchText } = await searchParams
 
   // Search form
-  if (!searchText) return <SearchForm searchType="customers" />
+  if (!searchText) return (
+    <>
+      <div className="app-body__top-bar">Tickets</div>
+      <div className="app-body__data-wrapper">
+        <SearchForm searchType="customers" />
+      </div>
+    </>
+  )
 
   // Query database
   const results = await getCustomerSearchResults(searchText)
 
   return (
     <>
-      <SearchForm searchType="customers" />
-      { results.length
-        ? <CustomerTable data={results} />
-        : <p className="mt-4">No results found</p>
-      }
+      <div className="app-body__top-bar">Customers</div>
+      <div className="app-body__data-wrapper">
+        <SearchForm searchType="customers" />
+        { results.length
+          ? <CustomerTable data={results} />
+          : <p className="mt-4">No results found</p>
+        }
+      </div>
     </>
   )
 

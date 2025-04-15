@@ -186,7 +186,7 @@ export default function TicketTable({ data }: Props) {
             {table.getHeaderGroups().map(headerGroup => (
               <TableRow key={headerGroup.id}>
                 {headerGroup.headers.map(header => (
-                  <TableHead key={header.id} className="bg-secondary p-1" style={{ width: header.getSize() }}>
+                  <TableHead key={header.id} className="p-1" style={{ width: header.getSize() }}>
                     <div>
                       {header.isPlaceholder 
                         ? null

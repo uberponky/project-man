@@ -118,7 +118,7 @@ export default function CustomerTable({ data }: Props) {
           {table.getHeaderGroups().map(headerGroup => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map(header => (
-                <TableHead key={header.id} className={`bg-secondary ${header.id === 'actions' ? 'w-12' : ''}`}>
+                <TableHead key={header.id} className={`${header.id === 'actions' ? 'w-12' : ''}`}>
                   <div className={`${header.id === 'actions' ? 'flex justify-center items-center' : ''}`}>
                     {header.isPlaceholder 
                       ? null
