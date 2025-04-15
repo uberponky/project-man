@@ -2,7 +2,7 @@ import { File, UsersRound, LogOut } from 'lucide-react'
 import Link from 'next/link'
 import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components'
 import { Button } from '@/components/ui/button'
-// import { ModeToggle } from '@/components/ModeToggle'
+import { ModeToggle } from '@/components/ModeToggle'
 import NavButton from '@/components/NavButton'
 // import { NavButtonMenu } from '@/components/NavButtonMenu'
 import './styles.css'
@@ -30,7 +30,7 @@ export default function Header() {
                 { title: "New Customer", href: "/customers/form"},
               ]}
             /> */}
-            {/* <ModeToggle /> */}
+            <ModeToggle />
             <div className="spacer"></div>
             <Button 
               variant="ghost"
