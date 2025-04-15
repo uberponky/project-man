@@ -46,6 +46,10 @@ body {
 }
 
 /* BLOCKS */
+.loading {
+  background-color: var(--PRIMARY);
+}
+
 .body {
   background-color: var(--PRIMARY);
   width: 100%;
