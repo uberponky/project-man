@@ -17,7 +17,7 @@ export default async function Customers({
   // Search form
   if (!searchText) return (
     <>
-      <div className="app-body__top-bar">Tickets</div>
+      <div className="app-body__top-bar">Customers</div>
       <div className="app-body__data-wrapper">
         <SearchForm searchType="customers" />
       </div>
