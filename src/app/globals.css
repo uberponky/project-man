@@ -176,7 +176,7 @@ body {
 .product-preview__con {
   display: flex;
   flex-direction: row;
-  width: 70vw;
+  width: 60vw;
   position: absolute;
   right: -5%;
   bottom: -10%;
